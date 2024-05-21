@@ -10,7 +10,19 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
 
+  
   <ItemGroup>
+    <None Remove="Assets\avatar.png" />
+    <None Remove="Assets\entertainment.png" />
+    <None Remove="Assets\expenses.png" />
+    <None Remove="Assets\food.png" />
+    <None Remove="Assets\home.png" />
+    <None Remove="Assets\logo.png" />
+    <None Remove="Assets\trips.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AsyncImageLoader.Avalonia" Version="3.2.1" />
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
