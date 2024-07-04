@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace FinanceFlow.Views
 {
-    public partial class MainWindow : Window
+    public partial class UpdateCategoryView : UserControl
     {
-        public MainWindow()
+        public UpdateCategoryView()
         {
             InitializeComponent();
         }

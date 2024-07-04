@@ -1,6 +1,13 @@
-﻿namespace FinanceFlow.ViewModels;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class MainViewModel : ViewModelBase
+namespace FinanceFlow.ViewModels
 {
-    public string Greeting => "Welcome to Avalonia!";
+    public class MainViewModel : ViewModelBase
+    {
+
+    }
 }

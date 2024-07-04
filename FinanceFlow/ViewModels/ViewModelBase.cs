@@ -1,7 +1,8 @@
 ﻿using ReactiveUI;
 
-namespace FinanceFlow.ViewModels;
-
-public class ViewModelBase : ReactiveObject
+namespace FinanceFlow.ViewModels
 {
+    public class ViewModelBase : ReactiveObject
+    {
+    }
 }

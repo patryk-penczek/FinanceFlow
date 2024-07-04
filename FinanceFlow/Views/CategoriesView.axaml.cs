@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace FinanceFlow.Views;
 
-public partial class MainView : UserControl
+public partial class CategoriesView : UserControl
 {
-    public MainView()
+    public CategoriesView()
     {
         InitializeComponent();
     }

@@ -1,0 +1,83 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:FinanceFlow.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="FinanceFlow.Views.CategoriesView"
+             x:DataType="vm:CategoriesViewModel">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="250"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<DockPanel Grid.Column="0" Background="#1B1B1B">
+			<Image Source="avares://FinanceFlow/Assets/logo.png" Margin="40" HorizontalAlignment="Center" DockPanel.Dock="Bottom"/>
+			<StackPanel>
+				<Ellipse Width="60" Height="60" HorizontalAlignment="Center" Margin="0 20 0 8">
+					<Ellipse.Fill>
+						<ImageBrush Source="avares://FinanceFlow/Assets/avatar.png"/>
+					</Ellipse.Fill>
+				</Ellipse>
+				<TextBlock Text="Patryk Penczek" HorizontalAlignment="Center" Foreground="White" FontWeight="SemiBold"/>
+				<StackPanel Margin="20 40 0 16">
+					<Button Content="Expenses" Background="Transparent" Foreground="White" HorizontalAlignment="Left" Command="{Binding ShowExpenseCommand}">
+						<Button.Template>
+							<ControlTemplate>
+								<StackPanel Orientation="Horizontal">
+									<Image Source="avares://FinanceFlow/Assets/home.png"/>
+									<TextBlock Text="Expenses" Margin="6 0"/>
+								</StackPanel>
+							</ControlTemplate>
+						</Button.Template>
+					</Button>
+				</StackPanel>
+				<StackPanel Margin="20 0 20 32">
+					<Button Content="Categories" Background="Transparent" Foreground="White" HorizontalAlignment="Left" Command="{Binding ShowCategoryCommand}">
+						<Button.Template>
+							<ControlTemplate>
+								<StackPanel Orientation="Horizontal">
+									<Image Source="avares://FinanceFlow/Assets/expenses.png"/>
+									<TextBlock Text="Categories" Margin="6 0"/>
+								</StackPanel>
+							</ControlTemplate>
+						</Button.Template>
+					</Button>
+				</StackPanel>
+			</StackPanel>
+		</DockPanel>
+
+		<ScrollViewer Grid.Column="1" Background="#1B1B1B">
+			<StackPanel Background="#0B0B0B" Margin="40 20 20 20">
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="40 20 0 0">
+					<Button Content="Add Category" Command="{Binding CreateCategoryCommand}" Padding="8" Margin="10" Background="#00A885" Foreground="White"/>
+					<Button Content="Update Category" Command="{Binding UpdateCategoryCommand}" Padding="8" Margin="10" Background="#00A885" Foreground="White"/>
+					<Button Content="Remove Category" Command="{Binding RemoveCategoryCommand}" Padding="8" Margin="10" Background="#00A885" Foreground="White"/>
+				</StackPanel>
+				<Grid Background="#FF0b0b0b" Margin="40 20 40 10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Nazwa" Grid.Column="0" FontSize="16" Margin="0 10" FontWeight="Bold" Foreground="#C2C1C2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				</Grid>
+				<ListBox Background="#EE1b1b1b" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}" Margin="40 0 40 20">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="*"/>
+								</Grid.ColumnDefinitions>
+								<TextBlock Text="{Binding Name}" Grid.Column="0" FontSize="16" Foreground="White" Margin="2" TextAlignment="Center"/>
+							</Grid>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

@@ -3,98 +3,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:FinanceFlow.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="FinanceFlow.Views.MainView"
-             x:DataType="vm:MainViewModel">
+			 x:DataType="vm:MainViewModel">
+
 	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
 		<vm:MainViewModel />
 	</Design.DataContext>
 
-	<Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="250"/>
-			<ColumnDefinition Width="*"/>
-		</Grid.ColumnDefinitions>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
-
-		<!-- Sidebar -->
-		<DockPanel Grid.Column="0" Background="#0B0B0B">
-			<Image Source="C:\Users\patry\source\repos\FinanceFlow\FinanceFlow\Assets\logo.png" Margin="40" HorizontalAlignment="Center" DockPanel.Dock="Bottom"/>
-			<StackPanel>
-				<Ellipse Width="60" Height="60" HorizontalAlignment="Center" Margin="0 20 0 8">
-					<Ellipse.Fill>
-						<ImageBrush Source="C:\Users\patry\source\repos\FinanceFlow\FinanceFlow\Assets\avatar.png"/>
-					</Ellipse.Fill>
-				</Ellipse>
-				<TextBlock Text="Patryk Penczek" HorizontalAlignment="Center" Foreground="White" FontWeight="SemiBold"/>
-				
-				<StackPanel Margin="20 40 0 16">
-					<Button Content="Home" Background="Transparent" Foreground="White" HorizontalAlignment="Left">
-						<Button.Template>
-							<ControlTemplate>
-								<StackPanel Orientation="Horizontal">
-									<Image Source="C:\Users\patry\source\repos\FinanceFlow\FinanceFlow\Assets\home.png" />
-									<TextBlock Text="Home" Margin="6 0"/>
-								</StackPanel>
-							</ControlTemplate>
-						</Button.Template>
-					</Button>
-				</StackPanel>
-				
-				<StackPanel Margin="20 0 20 32">
-					<Button Content="Expenses" Background="Transparent" Foreground="White" HorizontalAlignment="Left">
-						<Button.Template>
-							<ControlTemplate>
-								<StackPanel Orientation="Horizontal">
-									<Image Source="C:\Users\patry\source\repos\FinanceFlow\FinanceFlow\Assets\expenses.png" />
-									<TextBlock Text="Expenses" Margin="6 0"/>
-								</StackPanel>
-							</ControlTemplate>
-						</Button.Template>
-					</Button>
-				</StackPanel>
-				
-				<StackPanel Margin="20 0 20 16">
-					<Button Content="Food" Background="Transparent" Foreground="White" HorizontalAlignment="Left">
-						<Button.Template>
-							<ControlTemplate>
-								<StackPanel Orientation="Horizontal">
-									<Image Source="C:\Users\patry\source\repos\FinanceFlow\FinanceFlow\Assets\food.png" />
-									<TextBlock Text="Food" Margin="6 0"/>
-								</StackPanel>
-							</ControlTemplate>
-						</Button.Template>
-					</Button>
-				</StackPanel>
-
-				<StackPanel Margin="20 0 20 16">
-					<Button Content="Trips" Background="Transparent" Foreground="White" HorizontalAlignment="Left">
-						<Button.Template>
-							<ControlTemplate>
-								<StackPanel Orientation="Horizontal">
-									<Image Source="C:\Users\patry\source\repos\FinanceFlow\FinanceFlow\Assets\trips.png" />
-									<TextBlock Text="Trips" Margin="6 0"/>
-								</StackPanel>
-							</ControlTemplate>
-						</Button.Template>
-					</Button>
-				</StackPanel>
-
-				<StackPanel Margin="20 0 20 16">
-					<Button Content="Entertainment" Background="Transparent" Foreground="White" HorizontalAlignment="Left">
-						<Button.Template>
-							<ControlTemplate>
-								<StackPanel Orientation="Horizontal">
-									<Image Source="C:\Users\patry\source\repos\FinanceFlow\FinanceFlow\Assets\entertainment.png" />
-									<TextBlock Text="Entertainment" Margin="6 0"/>
-								</StackPanel>
-							</ControlTemplate>
-						</Button.Template>
-					</Button>
-				</StackPanel>
-			</StackPanel>
-		</DockPanel>
-	</Grid>
 </UserControl>
